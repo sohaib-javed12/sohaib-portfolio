@@ -520,62 +520,6 @@ class ScrollReveal {
   }
 }
 
-// ===== FORM HANDLING =====
-class FormHandler {
-  constructor() {
-    this.form = contactForm;
-    if (!this.form) return;
-    
-    this.init();
-  }
-
-  init() {
-    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-    
-    // Add input event listeners to remove error styling
-    const inputs = this.form.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-      input.addEventListener('input', () => {
-        input.style.borderColor = '';
-      });
-    });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    
-    const inputs = this.form.querySelectorAll('input, textarea');
-    let isValid = true;
-    
-    // Validate inputs
-    inputs.forEach(input => {
-      if (input.hasAttribute('required') && !input.value.trim()) {
-        isValid = false;
-        input.style.borderColor = '#ef4444';
-      }
-    });
-    
-    if (isValid) {
-      const button = this.form.querySelector('button');
-      const originalText = button.innerHTML;
-      const originalBg = button.style.background;
-      
-      // Show success state
-      button.innerHTML = 'Message Sent! <i class="fas fa-check"></i>';
-      button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-      button.disabled = true;
-      
-      // Reset form
-      setTimeout(() => {
-        button.innerHTML = originalText;
-        button.style.background = originalBg;
-        button.disabled = false;
-        this.form.reset();
-      }, 3000);
-    }
-  }
-}
-
 // ===== 3D TILT EFFECT =====
 class TiltEffect {
   constructor() {
