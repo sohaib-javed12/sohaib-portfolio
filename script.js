@@ -520,6 +520,50 @@ class ScrollReveal {
   }
 }
 
+// ===== FORM HANDLING =====
+// ===== FORM HANDLING (FORMPREE FIXED) =====
+class FormHandler {
+  constructor() {
+    this.form = contactForm;
+    if (!this.form) return;
+    this.init();
+  }
+
+  init() {
+    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+  }
+
+  async handleSubmit(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this.form);
+
+    const response = await fetch(this.form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    const button = this.form.querySelector('button');
+    const originalText = button.innerHTML;
+
+    if (response.ok) {
+      button.innerHTML = 'Message Sent! <i class="fas fa-check"></i>';
+      button.disabled = true;
+      this.form.reset();
+
+      setTimeout(() => {
+        button.innerHTML = originalText;
+        button.disabled = false;
+      }, 3000);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  }
+}
+
 // ===== 3D TILT EFFECT =====
 class TiltEffect {
   constructor() {
