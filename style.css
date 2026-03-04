@@ -1,3 +1,127 @@
+/* Add this at the beginning of your style.css file */
+
+/* Dark Theme Background (matching sohaibjaved.vercel.app) */
+body {
+  background-color: #0a0c0f !important;
+  background-image: radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 30%),
+                    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 30%);
+  color: #e2e8f0;
+}
+
+/* Ensure dark mode is default */
+.dark-mode {
+  background-color: #0a0c0f !important;
+}
+
+/* Update glass effect for dark theme */
+.glass {
+  background: rgba(18, 25, 45, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Section backgrounds */
+section {
+  background-color: transparent !important;
+}
+
+/* Update text colors */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+p {
+  color: #a0afc0 !important;
+}
+
+/* Navbar styling for dark theme */
+.navbar {
+  background: rgba(10, 12, 15, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.nav-link {
+  color: #a0afc0 !important;
+}
+
+.nav-link.active {
+  color: #3b82f6 !important;
+}
+
+/* Update cards */
+.skill-card.glass,
+.service-card.glass,
+.contact-info.glass,
+.contact-form.glass,
+.project-card.glass,
+.footer-quote.glass {
+  background: rgba(18, 25, 45, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Update buttons */
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.btn-outline:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Update hero stats */
+.hero-stat-item .stat-number {
+  color: #ffffff !important;
+}
+
+.hero-stat-item .stat-label {
+  color: #94a3b8 !important;
+}
+
+/* Update footer */
+.footer {
+  background: rgba(10, 12, 15, 0.95) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Update form inputs */
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3b82f6 !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.form-group i {
+  color: #3b82f6 !important;
+}
+
+/* Update social icons */
+.social-icon {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.social-icon:hover {
+  background: rgba(59, 130, 246, 0.15) !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Update floating badges */
+.floating-badges .badge {
+  background: rgba(18, 25, 45, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
 /* ===== VARIABLES ===== */
 :root {
   --deep-midnight: #0a0e1a;
@@ -1666,87 +1790,191 @@ body.light .toggle-thumb {
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* GitHub */
-.footer-social-link .fa-github {
-    color: #333;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
+/* Projects Section Styles */
+.projects {
+  padding: 100px 0;
+  position: relative;
 }
 
-.footer-social-link:hover .fa-github {
-    color: white;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
-.footer-social-link:hover {
-    background: #333;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.3);
+.project-card {
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-/* LinkedIn */
-.footer-social-link .fa-linkedin-in {
-    color: #0077B5;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
+.dark-mode .project-card {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
-.footer-social-link:hover .fa-linkedin-in {
-    color: white;
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 40px -20px rgba(59, 130, 246, 0.5);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
-.footer-social-link:hover:nth-child(2) {
-    background: #0077B5;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
+.project-img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
 }
 
-/* X (Twitter) */
-.footer-social-link .fa-x-twitter,
-.footer-social-link .social-x {
-    color: #000;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
-.footer-social-link:hover .fa-x-twitter,
-.footer-social-link:hover .social-x {
-    color: white;
+.project-card:hover .project-img {
+  transform: scale(1.08);
 }
 
-.footer-social-link:hover:nth-child(3) {
-    background: #000;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.project-content {
+  padding: 25px 20px 25px;
+  flex: 1;
 }
 
-/* Instagram */
-.footer-social-link .fa-instagram {
-    color: transparent;
-    background: radial-gradient(circle at 30% 110%, #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e5fbc 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
 }
 
-.footer-social-link:hover .fa-instagram {
-    color: white;
-    background: white;
-    background-clip: text;
-    -webkit-background-clip: text;
+.dark-mode .project-title {
+  color: #e2e8f0;
 }
 
-.footer-social-link:hover:nth-child(4) {
-    background: radial-gradient(circle at 30% 110%, #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e5fbc 100%);
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px rgba(210, 46, 129, 0.3);
+.project-description {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
 }
 
-/* Alternative Instagram hover effect */
-.footer-social-link:hover:nth-child(4) .fa-instagram {
-    color: white;
-    background: white;
-    -webkit-background-clip: text;
-    background-clip: text;
+.dark-mode .project-description {
+  color: #94a3b8;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.tech-tag {
+  background: rgba(59, 130, 246, 0.1);
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.dark-mode .tech-tag {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-img-wrapper {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Project Card Link Styles */
+.project-card-link {
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.project-card-link:hover {
+  transform: translateY(-5px);
+}
+
+.project-card-link .project-card {
+  cursor: pointer;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.project-card-link:hover .project-card {
+  box-shadow: 0 30px 40px -20px #3b82f6;
+  border-color: #3b82f6;
+}
+
+.project-link-hint {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.project-card-link:hover .project-link-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-link-hint i {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+/* Update existing project-card styles */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(59, 130, 246, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card-link:hover .project-card::after {
+  opacity: 1;
 }
