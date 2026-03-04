@@ -132,7 +132,7 @@
         <div class="about-grid">
           <div class="about-content glass">
             <div class="about-badge">Hello</div>
-            <h3>I'm Sohaib Javed, a Full-Stack Web Developer with a passion for building exceptional digital experiences.</h3>
+            <h3>I'm Sohaib Javed, a Full-Stack Developer with a passion for building exceptional digital experiences.</h3>
             <p class="about-text">
               With over 3+ years of experience in web development, I've helped startups and enterprises transform their ideas into powerful, scalable solutions. My approach combines technical excellence with business strategy to deliver results that matter.
             </p>
@@ -532,33 +532,34 @@
     </a>
 </div>
           </div>
-          
-          <form class="contact-form glass" id="contactForm">
-            <div class="form-group">
-              <input type="text" placeholder="Your Name" required>
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="form-group">
-              <input type="email" placeholder="Your Email" required>
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="form-group">
-              <input type="text" placeholder="Subject">
-              <i class="fas fa-tag"></i>
-            </div>
-            <div class="form-group">
-              <textarea rows="5" placeholder="Tell me about your project..."></textarea>
-              <i class="fas fa-pencil-alt"></i>
-            </div>
-            
-            <!-- BUTTON PERFECTLY CENTERED - Text and icon together -->
-            <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
-              <button type="submit" class="btn btn-primary" style="display: flex; justify-content: center; align-items: center; gap: 10px; width: auto; min-width: 200px; margin: 0 auto; text-align: center;">
-                <span>Send Message</span>
-                <i class="fas fa-paper-plane" style="margin-left: 0;"></i>
-              </button>
-            </div>
-          </form>
+        
+       <form id="contactForm" class="contact-form glass" action="https://formspree.io/f/mgolgygd" method="POST">
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <i class="fas fa-user"></i>
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="email" placeholder="Your Email" required>
+    <i class="fas fa-envelope"></i>
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="subject" placeholder="Subject">
+    <i class="fas fa-tag"></i>
+  </div>
+
+  <div class="form-group">
+    <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+    <i class="fas fa-pencil-alt"></i>
+  </div>
+
+  <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+    <button type="submit" class="btn btn-primary">
+      Send Message <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</form>
         </div>
       </div>
     </section>
