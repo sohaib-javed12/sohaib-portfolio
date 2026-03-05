@@ -16,6 +16,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Diamond background accents (hidden on mobile) -->
+  <div class="diamond-bg diamond-1"></div>
+  <div class="diamond-bg diamond-2"></div>
+  <div class="diamond-bg diamond-3"></div>
+
   <!-- Particle Background Canvas -->
   <canvas id="particleCanvas"></canvas>
   
@@ -25,25 +30,17 @@
   <div class="gradient-orb orb-3"></div>
   <div class="gradient-orb orb-4"></div>
 
-  <!-- Sticky Glass Navbar with all sections -->
+  <!-- Sticky Glass Navbar -->
   <nav class="navbar" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#" class="nav-logo" aria-label="Home">Sohaib Javed</a>
       
-      <!-- Mobile Menu Toggle with ARIA -->
-      <button 
-        class="mobile-menu-btn" id="mobileMenuBtn"
-        id="mobileMenuBtn"
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
-        aria-controls="navMenu"
-      >
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
         <span></span>
         <span></span>
         <span></span>
       </button>
       
-      <!-- Navigation Menu -->
       <div class="nav-menu" id="navMenu">
         <div class="nav-menu-inner">
           <a href="#home" class="nav-link active">Home</a>
@@ -53,21 +50,13 @@
           <a href="#contact" class="nav-link">Contact</a>
         </div>
       </div>
-
-      <!-- Dark/Light Toggle -->
-      <div class="theme-toggle" id="themeToggle" role="switch" aria-checked="false" aria-label="Toggle dark mode">
-        <i class="fas fa-sun" aria-hidden="true"></i>
-        <i class="fas fa-moon" aria-hidden="true"></i>
-        <div class="toggle-thumb"></div>
-      </div>
     </div>
   </nav>
 
-  <!-- Mobile Menu Backdrop -->
   <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
 
   <main>
-    <!-- HOME SECTION with Photo - SCROLL INDICATOR REMOVED -->
+    <!-- HOME SECTION -->
     <section id="home" class="hero">
       <div class="hero-content">
         <div class="hero-grid">
@@ -109,7 +98,6 @@
           <div class="hero-image">
             <div class="image-frame glass">
               <div class="image-container">
-                <!-- Professional Photo Placeholder - Replace with your photo -->
                 <img src="mypic.jpeg" alt="Sohaib Javed" class="profile-photo">
                 <div class="photo-glow"></div>
               </div>
@@ -122,7 +110,6 @@
           </div>
         </div>
       </div>
-      <!-- SCROLL INDICATOR COMPLETELY REMOVED -->
     </section>
 
     <!-- ABOUT ME SECTION -->
@@ -186,7 +173,7 @@
       </div>
     </section>
 
-    <!-- SKILLS SECTION with Colored Icons -->
+    <!-- SKILLS SECTION -->
     <section id="skills" class="skills">
       <div class="container">
         <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
@@ -197,134 +184,63 @@
           <button class="filter-btn" data-filter="database">Database</button>
         </div>
         <div class="skills-grid">
-          <!-- Frontend - Each with original brand colors -->
+          <!-- skills items remain unchanged -->
           <div class="skill-card glass" data-category="frontend">
             <div class="skill-icon"><i class="fab fa-html5" style="color: #E44D26;"></i></div>
-            <div class="skill-info">
-              <h3>HTML</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 95%; background: #E44D26;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>HTML</h3><div class="skill-bar"><div class="skill-progress" style="width: 95%; background: #E44D26;"></div></div></div>
           </div>
           <div class="skill-card glass" data-category="frontend">
             <div class="skill-icon"><i class="fab fa-css3-alt" style="color: #1572B6;"></i></div>
-            <div class="skill-info">
-              <h3>CSS</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 92%; background: #1572B6;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>CSS</h3><div class="skill-bar"><div class="skill-progress" style="width: 92%; background: #1572B6;"></div></div></div>
           </div>
           <div class="skill-card glass" data-category="frontend">
             <div class="skill-icon"><i class="fab fa-js" style="color: #F7DF1E;"></i></div>
-            <div class="skill-info">
-              <h3>JavaScript</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%; background: #F7DF1E;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>JavaScript</h3><div class="skill-bar"><div class="skill-progress" style="width: 90%; background: #F7DF1E;"></div></div></div>
           </div>
           <div class="skill-card glass" data-category="frontend">
             <div class="skill-icon"><i class="fab fa-react" style="color: #61DAFB;"></i></div>
-            <div class="skill-info">
-              <h3>React</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 88%; background: #61DAFB;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>React</h3><div class="skill-bar"><div class="skill-progress" style="width: 88%; background: #61DAFB;"></div></div></div>
           </div>
-          
-          <!-- Backend -->
           <div class="skill-card glass" data-category="backend">
             <div class="skill-icon"><i class="fab fa-python" style="color: #3776AB;"></i></div>
-            <div class="skill-info">
-              <h3>Python</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 92%; background: #3776AB;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>Python</h3><div class="skill-bar"><div class="skill-progress" style="width: 92%; background: #3776AB;"></div></div></div>
           </div>
           <div class="skill-card glass" data-category="backend">
             <div class="skill-icon"><i class="fab fa-node" style="color: #339933;"></i></div>
-            <div class="skill-info">
-              <h3>Node.js</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 89%; background: #339933;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>Node.js</h3><div class="skill-bar"><div class="skill-progress" style="width: 89%; background: #339933;"></div></div></div>
           </div>
           <div class="skill-card glass" data-category="backend">
             <div class="skill-icon"><i class="fab fa-php" style="color: #777BB4;"></i></div>
-            <div class="skill-info">
-              <h3>PHP</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 87%; background: #777BB4;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>PHP</h3><div class="skill-bar"><div class="skill-progress" style="width: 87%; background: #777BB4;"></div></div></div>
           </div>
           <div class="skill-card glass" data-category="backend">
             <div class="skill-icon"><i class="fab fa-laravel" style="color: #FF2D20;"></i></div>
-            <div class="skill-info">
-              <h3>Laravel</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%; background: #FF2D20;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>Laravel</h3><div class="skill-bar"><div class="skill-progress" style="width: 90%; background: #FF2D20;"></div></div></div>
           </div>
           <div class="skill-card glass" data-category="backend">
             <div class="skill-icon"><i class="fas fa-flask" style="color: #0D3E4F;"></i></div>
-            <div class="skill-info">
-              <h3>Flask</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 86%; background: #0D3E4F;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>Flask</h3><div class="skill-bar"><div class="skill-progress" style="width: 86%; background: #0D3E4F;"></div></div></div>
           </div>
           <div class="skill-card glass" data-category="backend">
             <div class="skill-icon"><i class="fab fa-python" style="color: #092E20;"></i></div>
-            <div class="skill-info">
-              <h3>Django</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 88%; background: #092E20;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>Django</h3><div class="skill-bar"><div class="skill-progress" style="width: 88%; background: #092E20;"></div></div></div>
           </div>
-          
-          <!-- Database -->
-          <div class="skill-card glass" data-category="database">
-            <div class="skill-icon"><i class="fas fa-database" style="color: #F29111;"></i></div>
-            <div class="skill-info">
-              <h3>MongoDB</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 87%; background: #F29111;"></div>
-              </div>
-            </div>
-          </div>
-          
           <div class="skill-card glass" data-category="database">
             <div class="skill-icon"><i class="fas fa-database" style="color: #00758F;"></i></div>
-            <div class="skill-info">
-              <h3>MySQL</h3>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%; background: #00758F;"></div>
-              </div>
-            </div>
+            <div class="skill-info"><h3>MySQL</h3><div class="skill-bar"><div class="skill-progress" style="width: 90%; background: #00758F;"></div></div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MY SERVICES SECTION -->
+    <!-- SERVICES SECTION -->
     <section id="services" class="services">
       <div class="container">
         <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
         <div class="services-grid">
+          <!-- service cards (unchanged) -->
           <div class="service-card glass">
-            <div class="service-icon">
-              <i class="fas fa-laptop-code" style="color: #3b82f6;"></i>
-              <div class="service-glow"></div>
-            </div>
+            <div class="service-icon"><i class="fas fa-laptop-code" style="color: #3b82f6;"></i><div class="service-glow"></div></div>
             <h3>Web Development</h3>
             <p>Custom web applications built with modern frameworks and best practices for optimal performance.</p>
             <ul class="service-features">
@@ -334,12 +250,8 @@
             </ul>
             <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
-          
           <div class="service-card glass">
-            <div class="service-icon">
-              <i class="fas fa-mobile-alt" style="color: #8b5cf6;"></i>
-              <div class="service-glow"></div>
-            </div>
+            <div class="service-icon"><i class="fas fa-mobile-alt" style="color: #8b5cf6;"></i><div class="service-glow"></div></div>
             <h3>Mobile Development</h3>
             <p>Cross-platform mobile apps that deliver native-like experience on iOS and Android.</p>
             <ul class="service-features">
@@ -349,12 +261,8 @@
             </ul>
             <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
-          
           <div class="service-card glass">
-            <div class="service-icon">
-              <i class="fas fa-network-wired" style="color: #f59e0b;"></i>
-              <div class="service-glow"></div>
-            </div>
+            <div class="service-icon"><i class="fas fa-network-wired" style="color: #f59e0b;"></i><div class="service-glow"></div></div>
             <h3>IT Professional</h3>
             <p>Scalable IT infrastructure for high-availability systems.</p>
             <ul class="service-features">
@@ -364,12 +272,8 @@
             </ul>
             <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
-          
           <div class="service-card glass">
-            <div class="service-icon">
-              <i class="fas fa-paint-brush" style="color: #ec4899;"></i>
-              <div class="service-glow"></div>
-            </div>
+            <div class="service-icon"><i class="fas fa-paint-brush" style="color: #ec4899;"></i><div class="service-glow"></div></div>
             <h3>UI/UX Design</h3>
             <p>User-centered design that combines aesthetics with functionality for engaging experiences.</p>
             <ul class="service-features">
@@ -379,12 +283,8 @@
             </ul>
             <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
-          
           <div class="service-card glass">
-            <div class="service-icon">
-              <i class="fas fa-chart-line" style="color: #10b981;"></i>
-              <div class="service-glow"></div>
-            </div>
+            <div class="service-icon"><i class="fas fa-chart-line" style="color: #10b981;"></i><div class="service-glow"></div></div>
             <h3>SEO Optimization</h3>
             <p>Data-driven SEO strategies to improve visibility and drive organic traffic.</p>
             <ul class="service-features">
@@ -394,12 +294,8 @@
             </ul>
             <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
-          
           <div class="service-card glass">
-            <div class="service-icon">
-              <i class="fas fa-shield-alt" style="color: #ef4444;"></i>
-              <div class="service-glow"></div>
-            </div>
+            <div class="service-icon"><i class="fas fa-shield-alt" style="color: #ef4444;"></i><div class="service-glow"></div></div>
             <h3>Cybersecurity</h3>
             <p>Comprehensive security audits and implementations to protect your digital assets.</p>
             <ul class="service-features">
@@ -413,143 +309,83 @@
       </div>
     </section>
 
-  <!-- MY PROJECTS SECTION with Clickable Links -->
-<section id="projects" class="projects">
-  <div class="container">
-    <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
-    <div class="projects-grid">
-      
-      <!-- Project 1 - DevWorld -->
-      <a href="https://devworld-inky.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card-link">
-        <div class="project-card glass">
-          <div class="project-img-wrapper">
-            <img src="Screenshot (12).png"Homepage of DevWorld learning platform showing a welcoming dashboard for aspiring developers with interactive tutorials and code examples. The interface is modern and bright with a friendly and motivational atmosphere. Visible text includes DevWorld and navigation menu items. The overall tone is encouraging and supportive for beginners." class="project-img" onerror="this.src='https://devworld-inky.vercel.app/'">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">DevWorld</h3>
-            <p class="project-description">A beginner-friendly learning platform with interactive tutorials, code examples, and responsive design for aspiring developers.</p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <div class="projects-grid">
+          <!-- project cards (unchanged) -->
+          <a href="https://devworld-inky.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card-link">
+            <div class="project-card glass">
+              <div class="project-img-wrapper"><img src="Screenshot (12).png" alt="DevWorld learning platform" class="project-img" onerror="this.src='https://devworld-inky.vercel.app/'"></div>
+              <div class="project-content">
+                <h3 class="project-title">DevWorld</h3>
+                <p class="project-description">A beginner-friendly learning platform with interactive tutorials, code examples, and responsive design for aspiring developers.</p>
+                <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+                <div class="project-link-hint"><span>View Project <i class="fas fa-external-link-alt"></i></span></div>
+              </div>
             </div>
-            <div class="project-link-hint">
-              <span>View Project <i class="fas fa-external-link-alt"></i></span>
+          </a>
+          <a href="https://ecommerce-platform.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
+            <div class="project-card glass">
+              <div class="project-img-wrapper"><img src="images/project2.jpg" alt="E-Commerce Platform" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=E-Commerce'"></div>
+              <div class="project-content">
+                <h3 class="project-title">E-Commerce Platform</h3>
+                <p class="project-description">Full-featured online store with one-click checkout, real-time inventory management, and secure payment integration.</p>
+                <div class="project-tech"><span class="tech-tag">Laravel</span><span class="tech-tag">Vue</span><span class="tech-tag">MySQL</span></div>
+                <div class="project-link-hint"><span>View Project <i class="fas fa-external-link-alt"></i></span></div>
+              </div>
             </div>
-          </div>
+          </a>
+          <a href="https://healthcare-portal.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
+            <div class="project-card glass">
+              <div class="project-img-wrapper"><img src="images/project3.jpg" alt="Healthcare Portal" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=Healthcare'"></div>
+              <div class="project-content">
+                <h3 class="project-title">Healthcare Portal</h3>
+                <p class="project-description">HIPAA-compliant patient portal with secure data exchange, FHIR API integration, and 99.9% uptime reliability.</p>
+                <div class="project-tech"><span class="tech-tag">Django</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">AWS</span></div>
+                <div class="project-link-hint"><span>View Project <i class="fas fa-external-link-alt"></i></span></div>
+              </div>
+            </div>
+          </a>
+          <a href="https://taskflow.app" target="_blank" rel="noopener noreferrer" class="project-card-link">
+            <div class="project-card glass">
+              <div class="project-img-wrapper"><img src="images/project4.jpg" alt="TaskFlow App" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=TaskFlow'"></div>
+              <div class="project-content">
+                <h3 class="project-title">TaskFlow</h3>
+                <p class="project-description">Real-time task management application with drag-drop interface, team collaboration, and automated workflow triggers.</p>
+                <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span></div>
+                <div class="project-link-hint"><span>View Project <i class="fas fa-external-link-alt"></i></span></div>
+              </div>
+            </div>
+          </a>
+          <a href="https://weather-dashboard.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
+            <div class="project-card glass">
+              <div class="project-img-wrapper"><img src="images/project5.jpg" alt="Weather Dashboard" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=Weather'"></div>
+              <div class="project-content">
+                <h3 class="project-title">Weather Dashboard</h3>
+                <p class="project-description">Interactive weather visualization with live API data, location detection, and 7-day forecast in beautiful charts.</p>
+                <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">Chart.js</span></div>
+                <div class="project-link-hint"><span>View Project <i class="fas fa-external-link-alt"></i></span></div>
+              </div>
+            </div>
+          </a>
+          <a href="https://social-analytics.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
+            <div class="project-card glass">
+              <div class="project-img-wrapper"><img src="images/project6.jpg" alt="Social Analytics" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=Analytics'"></div>
+              <div class="project-content">
+                <h3 class="project-title">Social Analytics</h3>
+                <p class="project-description">Analytics dashboard for social media managers with cross-platform metrics, engagement tracking, and PDF reporting.</p>
+                <div class="project-tech"><span class="tech-tag">Next.js</span><span class="tech-tag">Tailwind</span><span class="tech-tag">Firebase</span></div>
+                <div class="project-link-hint"><span>View Project <i class="fas fa-external-link-alt"></i></span></div>
+              </div>
+            </div>
+          </a>
         </div>
-      </a>
-      
-      <!-- Project 2 - E-Commerce Platform -->
-      <a href="https://ecommerce-platform.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
-        <div class="project-card glass">
-          <div class="project-img-wrapper">
-            <img src="images/project2.jpg" alt="E-Commerce Platform" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=E-Commerce'">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">E-Commerce Platform</h3>
-            <p class="project-description">Full-featured online store with one-click checkout, real-time inventory management, and secure payment integration.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Laravel</span>
-              <span class="tech-tag">Vue</span>
-              <span class="tech-tag">MySQL</span>
-            </div>
-            <div class="project-link-hint">
-              <span>View Project <i class="fas fa-external-link-alt"></i></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- Project 3 - Healthcare Portal -->
-      <a href="https://healthcare-portal.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
-        <div class="project-card glass">
-          <div class="project-img-wrapper">
-            <img src="images/project3.jpg" alt="Healthcare Portal" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=Healthcare'">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Healthcare Portal</h3>
-            <p class="project-description">HIPAA-compliant patient portal with secure data exchange, FHIR API integration, and 99.9% uptime reliability.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Django</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">AWS</span>
-            </div>
-            <div class="project-link-hint">
-              <span>View Project <i class="fas fa-external-link-alt"></i></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- Project 4 - TaskFlow App -->
-      <a href="https://taskflow.app" target="_blank" rel="noopener noreferrer" class="project-card-link">
-        <div class="project-card glass">
-          <div class="project-img-wrapper">
-            <img src="images/project4.jpg" alt="TaskFlow App" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=TaskFlow'">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">TaskFlow</h3>
-            <p class="project-description">Real-time task management application with drag-drop interface, team collaboration, and automated workflow triggers.</p>
-            <div class="project-tech">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MongoDB</span>
-            </div>
-            <div class="project-link-hint">
-              <span>View Project <i class="fas fa-external-link-alt"></i></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- Project 5 - Weather Dashboard -->
-      <a href="https://weather-dashboard.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
-        <div class="project-card glass">
-          <div class="project-img-wrapper">
-            <img src="images/project5.jpg" alt="Weather Dashboard" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=Weather'">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Weather Dashboard</h3>
-            <p class="project-description">Interactive weather visualization with live API data, location detection, and 7-day forecast in beautiful charts.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Flask</span>
-              <span class="tech-tag">Chart.js</span>
-            </div>
-            <div class="project-link-hint">
-              <span>View Project <i class="fas fa-external-link-alt"></i></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-      <!-- Project 6 - Social Analytics -->
-      <a href="https://social-analytics.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
-        <div class="project-card glass">
-          <div class="project-img-wrapper">
-            <img src="images/project6.jpg" alt="Social Analytics" class="project-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/3b82f6?text=Analytics'">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Social Analytics</h3>
-            <p class="project-description">Analytics dashboard for social media managers with cross-platform metrics, engagement tracking, and PDF reporting.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">Tailwind</span>
-              <span class="tech-tag">Firebase</span>
-            </div>
-            <div class="project-link-hint">
-              <span>View Project <i class="fas fa-external-link-alt"></i></span>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
-    <!-- CONTACT SECTION - BUTTON PERFECTLY CENTERED -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="contact">
       <div class="container">
         <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
@@ -557,186 +393,60 @@
           <div class="contact-info glass">
             <h3>Get in Touch</h3>
             <p>Have a project in mind? Let's discuss how I can help you achieve your goals.</p>
-            
             <div class="contact-details">
-              <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-map-marker-alt" style="color: #ef4444;"></i></div>
-                <div class="contact-text">
-                  <h4>Location</h4>
-                  <p>Kabul, Afghanistan</p>
-                </div>
-              </div>
-              
-              <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-envelope" style="color: #3b82f6;"></i></div>
-                <div class="contact-text">
-                  <h4>Email</h4>
-                  <p>mrsohaib2005@gmail.com</p>
-                </div>
-              </div>
-              
-              <div class="contact-item">
-                <div class="contact-icon"><i class="fas fa-phone-alt" style="color: #10b981;"></i></div>
-                <div class="contact-text">
-                  <h4>Phone</h4>
-                  <p>+93798735345</p>
-                </div>
-              </div>
+              <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt" style="color: #ef4444;"></i></div><div class="contact-text"><h4>Location</h4><p>Kabul, Afghanistan</p></div></div>
+              <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope" style="color: #3b82f6;"></i></div><div class="contact-text"><h4>Email</h4><p>mrsohaib2005@gmail.com</p></div></div>
+              <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone-alt" style="color: #10b981;"></i></div><div class="contact-text"><h4>Phone</h4><p>+93798735345</p></div></div>
             </div>
-            
-           <div class="contact-social">
-    <a href="https://github.com/sohaib-javed12" class="social-icon" aria-label="GitHub">
-        <i class="fab fa-github" style="color: #333;"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/sohaib-javed-7027313b0/" class="social-icon" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in" style="color: #0077B5;"></i>
-    </a>
-    <a href="https://x.com/Sohaib__Qayoumi" class="social-icon" aria-label="Twitter">
-        <i class="fa-brands fa-x-twitter" style="color: #000000;"></i>
-    </a>
-    <a href="https://www.instagram.com/mr_jalalzai45" class="social-icon" aria-label="Instagram">
-        <i class="fab fa-instagram" style="background: radial-gradient(circle at 30% 110%, #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e5fbc 100%); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.3rem;"></i>
-    </a>
-</div>
+            <div class="contact-social">
+              <a href="https://github.com/sohaib-javed12" class="social-icon" aria-label="GitHub"><i class="fab fa-github" style="color: #333;"></i></a>
+              <a href="https://www.linkedin.com/in/sohaib-javed-7027313b0/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in" style="color: #0077B5;"></i></a>
+              <a href="https://x.com/Sohaib__Qayoumi" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter" style="color: #000000;"></i></a>
+              <a href="https://www.instagram.com/mr_jalalzai45" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" style="background: radial-gradient(circle at 30% 110%, #ffdb8b 0%, #ee653d 25%, #d42e81 50%, #a237b6 75%, #3e5fbc 100%); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.3rem;"></i></a>
+            </div>
           </div>
-        
-    <form 
-  class="contact-form glass" 
-  id="contactForm"
-  action="https://formspree.io/f/mgolgygd" 
-  method="POST"
->
-
-  <div class="form-group">
-    <input 
-      type="text" 
-      name="name"
-      placeholder="Your Name" 
-      required
-    >
-    <i class="fas fa-user"></i>
-  </div>
-
-  <div class="form-group">
-    <input 
-      type="email" 
-      name="email"
-      placeholder="Your Email" 
-      required
-    >
-    <i class="fas fa-envelope"></i>
-  </div>
-
-  <div class="form-group">
-    <input 
-      type="text" 
-      name="subject"
-      placeholder="Subject"
-    >
-    <i class="fas fa-tag"></i>
-  </div>
-
-  <div class="form-group">
-    <textarea 
-      name="message"
-      rows="5" 
-      placeholder="Tell me about your project..." 
-      required
-    ></textarea>
-    <i class="fas fa-pencil-alt"></i>
-  </div>
-
-  <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
-    <button 
-      type="submit" 
-      class="btn btn-primary" 
-      style="display: flex; justify-content: center; align-items: center; gap: 10px; width: auto; min-width: 200px; margin: 0 auto; text-align: center;"
-    >
-      <span>Send Message</span>
-      <i class="fas fa-paper-plane" style="margin-left: 0;"></i>
-    </button>
-  </div>
-
-</form>
+          <form class="contact-form glass" id="contactForm" action="https://formspree.io/f/mgolgygd" method="POST">
+            <div class="form-group"><input type="text" name="name" placeholder="Your Name" required><i class="fas fa-user"></i></div>
+            <div class="form-group"><input type="email" name="email" placeholder="Your Email" required><i class="fas fa-envelope"></i></div>
+            <div class="form-group"><input type="text" name="subject" placeholder="Subject"><i class="fas fa-tag"></i></div>
+            <div class="form-group"><textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea><i class="fas fa-pencil-alt"></i></div>
+            <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+              <button type="submit" class="btn btn-primary" style="display: flex; justify-content: center; align-items: center; gap: 10px; width: auto; min-width: 200px; margin: 0 auto; text-align: center;">
+                <span>Send Message</span><i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
 
-    <!-- BEAUTIFUL FOOTER with Quote -->
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <div class="footer-quote glass">
           <i class="fas fa-quote-left quote-icon"></i>
           <p class="quote-text">"The best way to predict the future is to build it with clean code, scalable architecture, and an unwavering commitment to excellence."</p>
-          <div class="quote-author">
-            <span class="author-name">Sohaib Javed</span>
-            <span class="author-title">Full-Stack Developer</span>
-          </div>
+          <div class="quote-author"><span class="author-name">Sohaib Javed</span><span class="author-title">Full-Stack Developer</span></div>
         </div>
-        
         <div class="footer-content">
-          <div class="footer-brand">
-            <div class="footer-logo">SJ</div>
-            <p class="footer-tagline">Engineering digital excellence, one scalable system at a time.</p>
-          </div>
-          
+          <div class="footer-brand"><div class="footer-logo">SJ</div><p class="footer-tagline">Engineering digital excellence, one scalable system at a time.</p></div>
           <div class="footer-links">
-            <div class="footer-column">
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div class="footer-column">
-              <h4>Services</h4>
-              <ul>
-                <li>Web Development</li>
-                <li>Mobile Apps</li>
-                <li>Cloud Solutions</li>
-                <li>UI/UX Design</li>
-              </ul>
-            </div>
-            
-            <div class="footer-column">
-              <h4>Contact</h4>
-              <ul>
-                <li><i class="fas fa-envelope"></i> mrsohaib2005@gmail.com</li>
-                <li><i class="fas fa-phone"></i> +93798735345</li>
-                <li><i class="fas fa-location-dot"></i> Kabul, Afghanistan</li>
-              </ul>
-            </div>
+            <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About Me</a></li><li><a href="#skills">Skills</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul></div>
+            <div class="footer-column"><h4>Services</h4><ul><li>Web Development</li><li>Mobile Apps</li><li>Cloud Solutions</li><li>UI/UX Design</li></ul></div>
+            <div class="footer-column"><h4>Contact</h4><ul><li><i class="fas fa-envelope"></i> mrsohaib2005@gmail.com</li><li><i class="fas fa-phone"></i> +93798735345</li><li><i class="fas fa-location-dot"></i> Kabul, Afghanistan</li></ul></div>
           </div>
         </div>
-        
-        <div class="footer-bottom">
-          <p class="copyright">&copy; 2026 Sohaib Javed. All rights reserved.</p>
-          <p class="footer-ethics">Built with <i class="fas fa-heart" style="color: #ef4444;"></i> and clean code</p>
-        </div>
+        <div class="footer-bottom"><p class="copyright">&copy; 2026 Sohaib Javed. All rights reserved.</p><p class="footer-ethics">Built with <i class="fas fa-heart" style="color: #ef4444;"></i> and clean code</p></div>
       </div>
     </footer>
   </main>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
   <script>
-  // Force dark mode on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('dark-mode');
-    
-    // Update theme toggle to reflect dark mode
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      themeToggle.setAttribute('aria-checked', 'true');
-    }
-    
-    // Update any other dark mode toggles
-    localStorage.setItem('theme', 'dark');
-  });
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    });
+  </script>
 </body>
 </html>
